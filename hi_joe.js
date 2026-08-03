@@ -61,3 +61,59 @@ function loadCircuits() {
         })
         .catch(error => console.error('Error loading circuits:', error));
 }
+
+function loadchess() {
+    const container = document.getElementById('chessContainer') || document.getElementById('circuitsContainer');
+
+    if (!container) {
+        console.error('No content container found for chess links.');
+        return;
+    }
+    
+    // Toggle visibility
+    if (container.style.display === 'block') {
+        container.style.display = 'none';
+        return;
+    }
+    
+    // Load URLs from chess_links.txt
+    fetch('chess_links.txt')
+        .then(response => response.text())
+        .then(text => {
+            const lines = text.split('\n');
+            const urls = [];
+            const labels = [];
+            let pendingLabel = '';
+            
+            for (let line of lines) {
+                line = line.trim();
+                if (!line) continue;
+
+                if (line.startsWith('https://') || line.startsWith('http://')) {
+                    urls.push(line);
+                    labels.push(pendingLabel || `Chess ${urls.length}`);
+                    pendingLabel = '';
+                } else {
+                    pendingLabel = line.replace(/^Label:\s*/, '').trim();
+                }
+            }
+            
+            console.log('Loaded chess links:', urls);
+            console.log('Loaded chess labels:', labels);
+            
+            container.innerHTML = '';
+            
+            urls.forEach((url, index) => {
+                const link = document.createElement('a');
+                link.href = url;
+                link.target = '_blank';
+                link.textContent = labels[index] || `Chess ${index + 1}`;
+                link.classList.add('circuit-link');
+                
+                container.appendChild(link);
+            });
+            
+            container.style.display = 'block';
+        })
+        .catch(error => console.error('Error loading chess links:', error));
+}

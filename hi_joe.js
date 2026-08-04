@@ -1,14 +1,7 @@
 function toggleBackground() {
     const body = document.body;
-    if ((body.style.backgroundColor === 'grey')) {
-        body.style.backgroundColor = 'white';
-    } else {
-        body.style.backgroundColor = 'grey';
-    }
-}
-
-function help() {
-     alert('press the red butten to change background color to grey or white, and press the show circuits button to see some urls of some circuits i made and saved');
+    const isDark = body.dataset.theme === 'dark';
+    body.dataset.theme = isDark ? 'light' : 'dark';
 }
 
 function loadCircuits() {

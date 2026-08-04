@@ -21,7 +21,7 @@ function loadCircuits() {
     }
     
     // Load URLs from falstad_circuits.txt
-    fetch('falstad_circuits.txt')
+    fetch('contents/falstad_circuits.txt')
         .then(response => response.text())
         .then(text => {
             // Parse the text file to extract URLs
@@ -77,7 +77,7 @@ function loadchess() {
     }
     
     // Load URLs from chess_links.txt
-    fetch('chess_links.txt')
+    fetch('contents/chess_links.txt')
         .then(response => response.text())
         .then(text => {
             const lines = text.split('\n');

@@ -88,6 +88,15 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 0;
+    color: rgba(2, 58, 24, 0.929);
+    text-align: center;
+}
+
 .red-btn,
 .circuits-btn {
     width: min(100%, 220px);

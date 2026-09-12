@@ -25,7 +25,7 @@ function loadCircuits() {
             for (let line of lines) {
                 line = line.trim();
                 // Extract URLs that start with http
-                if (line.startsWith('https://') || line.startsWith('http://')) {
+                if (line.startsWith('https://') || line.startsWith('http://') || line.startsWith('contents/')) {
                     urls.push(line);
                 }
                 else if (line.startsWith('Label:')) {
@@ -82,7 +82,7 @@ function loadchess() {
                 line = line.trim();
                 if (!line) continue;
 
-                if (line.startsWith('https://') || line.startsWith('http://')) {
+                if (line.startsWith('https://') || line.startsWith('http://') || line.startsWith('contents/')) {
                     urls.push(line);
                     labels.push(pendingLabel || `Chess ${urls.length}`);
                     pendingLabel = '';

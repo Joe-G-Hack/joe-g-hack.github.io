@@ -33,3 +33,8 @@ Label: smart car
 
 contents/smart_car.png
 
+
+
+Label: delay circuit
+
+contents/delay_circuit.png

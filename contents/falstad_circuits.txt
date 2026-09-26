@@ -38,3 +38,9 @@ contents/smart_car.png
 Label: delay circuit
 
 contents/delay_circuit.png
+
+
+
+Label: laser alarm
+
+contents/laser_alarm.png

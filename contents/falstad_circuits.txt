@@ -44,3 +44,9 @@ contents/delay_circuit.png
 Label: laser alarm
 
 contents/laser_alarm.png
+
+
+
+Label: light sensitive metronome
+
+contents/Light_sensitive_metronome.png

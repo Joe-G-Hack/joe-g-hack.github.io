@@ -175,6 +175,15 @@ h2 {
     background-color: rgb(102, 51, 0);
 }
 
+.link-counts {
+    color: white;
+    text-align: center;
+}
+
+.link-counts p {
+    margin: 4px 0;
+}
+
 .car-picture {
     display: block;
     width: min(100%, 220px);

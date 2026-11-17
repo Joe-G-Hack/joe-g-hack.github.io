@@ -56,3 +56,9 @@ contents/Light_sensitive_metronome.png
 Label: Audio Amplifier
 
 contents/audio_amplifier.png
+
+
+
+Label: 7 segment display
+
+contents/7-segment-display.png
